@@ -27,8 +27,8 @@
                                             <div class="row">
                                                 <div class="col-12">
                                                     <div class="form-group">
-                                                        <label for="type">Type Product</label>
-                                                        <input type="text" id="type" class="form-control" name="type" placeholder="NEW ERTIGA GL MT MC" required autofocus>
+                                                        <label for="type">Product Name</label>
+                                                        <input type="text" id="name" class="form-control" name="name" placeholder="NEW ERTIGA GL MT MC" required autofocus>
                                                     </div>
                                                 </div>
                                                 <div class="col-12">    
@@ -55,7 +55,7 @@
                                             </div>
                                         </div>
                                         <div class="col-sm-12 d-flex justify-content-end">
-                                            <button type="submit" class="btn btn-suceess btn-sm me-1 mb-1 text-white">Simpan</button>
+                                            <button type="submit" class="btn btn-success btn-sm me-1 mb-1 text-white">Simpan</button>
                                         </div>
                                     </form>
                                 </div>

@@ -12,11 +12,15 @@ class Product extends Model
     protected $guarded = ['id'];
 
     public function getProducts(){
-        return Product::orderBy('type')->paginate(6);
+        return Product::orderBy('name')->simplePaginate(8);
+    }
+
+    public function getProductsDashboard(){
+        return Product::orderBy('name')->paginate(8);
     }
 
     public function searchProducts($search){
-        return Product::where('type', 'like', '%' . $search . '%')
+        return Product::where('name', 'like', '%' . $search . '%')
             ->paginate(6);
     }
 }

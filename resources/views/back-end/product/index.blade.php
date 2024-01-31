@@ -31,8 +31,7 @@
                                             <tr>
                                                 <th>No</th>
                                                 <th>Gambar</th>
-                                                <th>Type Product</th>
-                                                <th>Deskripsi</th>
+                                                <th>Nama Product</th>
                                                 <th>OTR</th>
                                                 <th>Aksi</th>
                                                 <th>Log</th>
@@ -52,11 +51,7 @@
                                                             </label>
                                                         </td>
                                                         <td class="col">
-                                                            <label class="form-label">{{ $item->type }}</label>
-                                                            </label>
-                                                        </td>
-                                                        <td class="col">
-                                                            <label class="form-label">{{ $item->description }}</label>
+                                                            <label class="form-label">{{ $item->name }}</label>
                                                             </label>
                                                         </td>
                                                         <td class="col">

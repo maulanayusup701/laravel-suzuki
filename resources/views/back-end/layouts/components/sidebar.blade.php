@@ -42,12 +42,6 @@
         <div class="sidebar-menu">
             <ul class="menu">
                 <li class="sidebar-title">Menu</li>
-                <li class="sidebar-item {{ Request::is('dashboard') ? 'active' : '' }}">
-                    <a href="/dashboard" class='sidebar-link'>
-                        <i class="bi bi-grid-fill"></i>
-                        <span>Dashboard</span>
-                    </a>
-                </li>
                 <li class="sidebar-item {{ Request::is('dashboard/product*') ? 'active' : '' }}">
                     <a href="/dashboard/product" class='sidebar-link'>
                         <i class="bi bi-bag-fill"></i>
@@ -67,12 +61,15 @@
                         <span>Visit Website</span>
                     </a>
                 </li>
-                <li class="sidebar-item has-sub {{ Request::is('dashboard/information*') || Request::is('dashboard/user*') ? 'active' : '' }} ">
+                <li class="sidebar-item has-sub {{ Request::is('dashboard/information*') || Request::is('dashboard/user*') || Request::is('dashboard/carousell*') ? 'active' : '' }} ">
                     <a href="#" class="sidebar-link">
                         <i class="bi bi-grid-1x2-fill"></i>
                         <span>Settings</span>
                     </a>
                     <ul class="submenu submenu-closed" style="--submenu-height: 215px;">
+                        <li class="submenu-item {{ Request::is('dashboard/carousell*') ? 'active' : '' }}">
+                            <a href="/dashboard/carousell" class="submenu-link">Carousell</a>
+                        </li>
                         <li class="submenu-item {{ Request::is('dashboard/information*') ? 'active' : '' }}">
                             <a href="/dashboard/information" class="submenu-link"> Web</a>
                         </li>

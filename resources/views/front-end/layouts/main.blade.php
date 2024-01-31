@@ -1,3 +1,6 @@
 @include('front-end.layouts.components.meta')
+@include('front-end.layouts.components.navbar')
 @yield('content')
+@include('front-end.layouts.components.cta')
+@include('front-end.layouts.components.footer')
 @include('front-end.layouts.components.script')

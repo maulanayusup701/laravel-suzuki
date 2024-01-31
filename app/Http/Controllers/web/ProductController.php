@@ -18,7 +18,7 @@ class ProductController extends Controller
         return view('back-end.product.index', [
             'title' => 'Products',
             'products' => $search ? (new Product)->searchProducts($search)
-            : (new Product)->getProducts(),
+            : (new Product)->getProductsDashboard(),
         ]);
     }
 
@@ -38,10 +38,10 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'type' => 'required',
+            'name' => 'required',
             'otr' => 'required',
             'description' => 'required',
-            'image' => 'required | image | max:1024 | mimes:png,jpg,jpeg ',
+            'image' => 'required | image | max:1024 | mimes:png,jpg,jpeg,webp',
             // | dimensions:ratio=3/2
         ]);
         
@@ -74,11 +74,11 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
+        
         $data = $request->validate([
-            'type' => 'required',
+            'name' => 'required',
             'otr' => 'required|numeric',
-            'description' => 'required',
-            'image' => 'image|mimes:png,jpg,jpeg|max:1024',
+            'image' => 'image|mimes:png,jpg,jpeg,webp|max:1024',
         ]);
 
         if ($request->hasFile('image')) {

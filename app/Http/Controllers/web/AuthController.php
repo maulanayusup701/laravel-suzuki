@@ -24,7 +24,7 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('dashboard')->with('toastr-success', 'Login Success');
+            return redirect()->intended('dashboard/product')->with('toastr-success', 'Login Success');
         }
 
         return back()->with('toastr-error', 'Login Failed!');
@@ -35,7 +35,7 @@ class AuthController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect()->route('login')->with('toastr-success', 'Logout Success');
+        return redirect('/')->with('toastr-success', 'Logout Success');
 
     }
 }
